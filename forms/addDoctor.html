@@ -11,15 +11,16 @@
         <form action="../api/post/createDoctor.php" method="post">
             <div class="campos bg-light shadow p-4 rounded">
                 <h2 class="fw-bold text-green mb-4">Añadir Doctor</h2>
-                <input class="form-control my-2" type="text" name="nombre" placeholder="Nombre y Apellidos">
-                <input class="form-control my-2" type="text" name="tel" placeholder="Telefono">
-                <input class="form-control my-2" type="text" name="dir" placeholder="Direccion">
-                <input class="form-control my-2" type="text" name="cargo" placeholder="Cargo">
+                <input class="form-control my-2" type="text" name="nombre" placeholder="Nombre y Apellidos" id="nombre">
+                <input class="form-control my-2" type="text" name="tel" placeholder="Telefono" id="telefono">
+                <input class="form-control my-2" type="text" name="dir" placeholder="Direccion" id="direccion">
+                <input class="form-control my-2" type="text" name="cargo" placeholder="Cargo" id="cargo">
                 <div class="botones mt-4 d-flex justify-content-around">
-                    <button class="btn bg-green rounded-2 text-light">Aceptar</button>
-                    <button class="btn btn-outline-danger rounded-2">Cancelar</button>
+                    <button class="btn bg-green rounded-2 text-light" id="aceptarbtn">Aceptar</button>
+                    <button class="btn btn-outline-danger rounded-2" id="cancelarbtn">Cancelar</button>
                 </div>
             </div>
         </form>
+        <script src="./js/addDoctor.js"></script>
 </body>
 </html>

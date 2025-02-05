@@ -11,19 +11,20 @@
         <form action="" method="post">
             <div class="campos bg-light shadow p-4 rounded">
                 <h2 class="fw-bold text-green mb-4">Añadir Mascotas</h2>
-                <input class="form-control my-2" type="text" placeholder="Nombre">
+                <input class="form-control my-2" type="text" placeholder="Nombre" id="nombre">
                 <select class="form-select my-2" name="" id="">
                     <option value="hembra">Hembra</option>
                     <option value="macho">Macho</option>
                 </select>
-                <input class="form-control my-2" type="text" placeholder="Tipo">
-                <input class="form-control my-2" type="text" placeholder="Color">
-                <input class="form-control my-2" type="number" placeholder="Edad">
+                <input class="form-control my-2" type="text" placeholder="Tipo" id="tipo">
+                <input class="form-control my-2" type="text" placeholder="Color" id="color">
+                <input class="form-control my-2" type="number" placeholder="Edad" id="edad">
                 <div class="botones mt-4 d-flex justify-content-around">
-                    <button class="btn bg-green rounded-2 text-light">Aceptar</button>
-                    <button class="btn btn-outline-danger rounded-2">Cancelar</button>
+                    <button class="btn bg-green rounded-2 text-light" id="aceptarbtn">Aceptar</button>
+                    <button class="btn btn-outline-danger rounded-2" id="cancelarbtn">Cancelar</button>
                 </div>
             </div>
         </form>
+        <script src="./js/addMascota.js"></script>
 </body>
 </html>
