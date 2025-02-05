@@ -1,0 +1,17 @@
+:root{
+    --primaryC: #247F70;
+    --ligthBgColor: #D8eee7;
+
+}
+.bg-green{
+    background: var(--primaryC) !important;
+}
+.text-green{
+    color: var(--primaryC) !important;
+}
+.campos{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
