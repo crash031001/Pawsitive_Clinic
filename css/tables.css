@@ -1,0 +1,72 @@
+
+:root{
+    --primaryC: #247F70;
+    --ligthBgColor: #D8eee7;
+    --dark: #353535;
+}
+.bg-green{
+    background: var(--primaryC) !important;
+}
+
+table{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.blur-circle{
+    width: 700px;
+    height: 700px;
+    background:var(--dark);
+    opacity: 0.5;
+    border-radius: 50%;
+    filter: blur(100px);
+    position: absolute;
+}
+.header{
+    position: absolute;
+    font-size: 70px;
+    font-family: Poppins;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.left{
+    left: 0;
+    transform: translate(-50%,-50%);
+}
+.right{
+    right: 0;
+    transform: translate(50%,50%);
+}
+th{
+    padding: 10px; 
+    color: #ccc;
+    border-bottom: 1px solid #ccc;
+}
+td{
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+.icon{
+    cursor: pointer;
+    transition: 0.3s all ;
+    scale: 1;
+}
+.icon:hover{
+    scale: 1.2;
+    filter: drop-shadow(1px 1px 2px rgb(42, 42, 42));
+}
+.bi-pencil-fill:hover{
+    color: rgb(80, 183, 228);
+}
+.bi-file-earmark-x-fill:hover{
+    color: rgb(205, 58, 58);
+}
+.add{
+    text-decoration: none;
+    color: #ccc;
+}
+.add:hover{
+    color: #41c389;
+}
