@@ -11,19 +11,25 @@ include 'C:\xampp\htdocs\WEB_FINAL\api\get\getDoctors.php';
     <link rel="stylesheet" href="../css/tables.css">
 </head>
 <body class="bg-green">
-  <span class="header mt-5 text-light fs fw-bold">Doctores
-  <a href="../forms/addDoctor.html"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus-square-fill icon add" viewBox="0 0 16 16">
+  <a href="../index.html" class="back d-flex align-items-center text-decoration-none">
+    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#247F70" class="bi bi-arrow-left me-2" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+</svg>
+<span class="fw-bold"></span>
+</a>
+  <span class="header mt-5 text-light fw-bold">Doctores
+  <a href="../forms/addDoctor.html"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-plus-square-fill icon add" viewBox="0 0 16 16">
   <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0"/>
 </svg></a>
   </span>
-  <table class="w-50">
+  <table >
         <thead>
           <tr>
-            <th class="bg-green " scope="col">Nombre y Apellidos</th>
-            <th class="bg-green " scope="col">Teléfono</th>
-            <th class="bg-green " scope="col">Dirección</th>
-            <th class="bg-green " scope="col">Cargo</th>
-            <th class="bg-green " scope="col">Acciones</th>
+            <th scope="col">Nombre y Apellidos</th>
+            <th scope="col">Teléfono</th>
+            <th scope="col">Dirección</th>
+            <th scope="col">Cargo</th>
+            <th scope="col">Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -45,8 +51,21 @@ include 'C:\xampp\htdocs\WEB_FINAL\api\get\getDoctors.php';
         </tbody>
         <?php endforeach; ?>
       </table>
+      <nav aria-label="Paginación">
+          <ul class="pagination mt-5">
+              <li class="page-item <?php echo $pagina_actual <= 1 ? 'disabled' : ''; ?>">
+                  <a class="page-link" href="?page=<?php echo $pagina_actual - 1; ?>">Anterior</a>
+              </li>
+              <?php for ($i = 1; $i <= $total_paginas; $i++): ?>
+                  <li class="page-item <?php echo $i == $pagina_actual ? 'active' : ''; ?>">
+                      <a class="page-link" href="?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                  </li>
+              <?php endfor; ?>
+              <li class="page-item <?php echo $pagina_actual >= $total_paginas ? 'disabled' : ''; ?>">
+                  <a class="page-link" href="?page=<?php echo $pagina_actual + 1; ?>">Siguiente</a>
+              </li>
+          </ul>
+    </nav>
       <script src="../bootstrap-5.3.3-dist/js/bootstrap.js"></script>
-      
-      
 </body>
 </html>
