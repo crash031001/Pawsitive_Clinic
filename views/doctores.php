@@ -10,7 +10,7 @@ include 'C:\xampp\htdocs\WEB_FINAL\api\get\getDoctors.php';
     <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.css">
     <link rel="stylesheet" href="../css/tables.css">
 </head>
-<body class="bg-green">
+<body>
   <a href="../index.html" class="back d-flex align-items-center text-decoration-none">
     <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#247F70" class="bi bi-arrow-left me-2" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
@@ -39,11 +39,11 @@ include 'C:\xampp\htdocs\WEB_FINAL\api\get\getDoctors.php';
             <td><?php echo $doc['telefono'] ?></td>
             <td><?php echo $doc['direccion'] ?></td>
             <td><?php echo $doc['cargo'] ?></td>
-            <td>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill mx-1 icon" viewBox="0 0 16 16">
+            <td align="end" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-pencil-fill mx-1 icon" viewBox="0 0 16 16">
               <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z"/>
             </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-x-fill mx-1 icon" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-file-earmark-x-fill mx-1 icon" viewBox="0 0 16 16">
               <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M6.854 7.146 8 8.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 9l1.147 1.146a.5.5 0 0 1-.708.708L8 9.707l-1.146 1.147a.5.5 0 0 1-.708-.708L7.293 9 6.146 7.854a.5.5 0 1 1 .708-.708"/>
             </svg>
             </td>
@@ -67,5 +67,6 @@ include 'C:\xampp\htdocs\WEB_FINAL\api\get\getDoctors.php';
           </ul>
     </nav>
       <script src="../bootstrap-5.3.3-dist/js/bootstrap.js"></script>
-</body>
+      </div>
+    </body>
 </html>

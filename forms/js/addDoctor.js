@@ -36,9 +36,9 @@ if (err.length != 0) {
     err.forEach(elem=>{
         const tag = document.createElement('li')
         tag.textContent = elem
-        tag.classList.add('text-danger')
         tag.classList.add('mb-2')
-        tag.classList.add('m-0')
+        tag.classList.add('err')
+        tag.classList.add('fw-bold')
         errTags.appendChild(tag)
     })
 }else{

@@ -9,20 +9,18 @@
 }
 body{
     height: 100vh;
+    /* background-image: url('../image/Sin-título-2_0015_-.png'); */
+    background: linear-gradient(to right,#13575A,#22968B, #13575A);
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-size: cover;
+    backdrop-filter: blur(20px);
+    overflow-y: hidden;
 }
-.blur-circle{
-    width: 700px;
-    height: 700px;
-    background:var(--dark);
-    opacity: 0.5;
-    border-radius: 50%;
-    filter: blur(100px);
-    position: absolute;
-}
+
 .header{
     position: absolute;
     font-size: 70px;
@@ -87,6 +85,17 @@ td{
     background: #ccc;
     color: #247F70;
 }
+.footer-line{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -120px;
+    mix-blend-mode: multiply;
+}
+@media (max-width:700px) {
+    .footer{
+        margin-bottom: 0px;
+    }
+}
 .back{
     transition: 0.4s all;
     scale: 1;
@@ -112,7 +121,7 @@ td{
     box-shadow: 2px 2px 7px rgb(63, 63, 63);
 }
 table{
-    font-size: 20px !important;
+    font-size: 23px !important;
 }
 @media (max-width: 1000px) {
     .header{
