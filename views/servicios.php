@@ -85,6 +85,17 @@ include 'C:\xampp\htdocs\WEB_FINAL\api\get\getDoctors.php';
               </li>
           </ul>
     </nav>
+    <form method="post" class="mod">
+        <div class="window rounded-2 shadow">
+            <span class="encab">Alerta!</span>
+            <hr>
+                <p>Desea eliminar este elemento?</p>
+                <div class="d-flex justify-content-around">
+                    <button type="submit" id="accept">Confirmar</button>
+                    <button id="cancel">Cancelar</button>
+                </div>
+        </div>
+    </form>
       <script src="../bootstrap-5.3.3-dist/js/bootstrap.js"></script>
       </div>
       <svg id="Capa" class="esquina" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 252.77 216.77"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#22968b;}</style></defs><title>Sin título-1</title><polygon class="cls-1" points="0 216.77 252.77 216.77 252.77 0 0 216.77"/><path class="cls-2" d="M464.05-189.59s11.09-10.67,14.39-17.78,14.43-7,18.17-1.83,7.6,11.09,15,18.51,4.79,17.15,4.79,17.15-3.27,10.94-14.95,7.82-14.36-3.86-25.06-.2-17.44-5.27-16.9-12.26A20.49,20.49,0,0,1,464.05-189.59Z" transform="translate(-304.53 352.17)"/><path class="cls-2" d="M467.23-221.33s-7.09-14.66,4-20.33c0,0,11.34-3.56,14.37,14,0,0,.83,9.48-5.33,12.61C480.27-215,472.6-211,467.23-221.33Z" transform="translate(-304.53 352.17)"/><path class="cls-2" d="M491.05-225.41s0-16.55,12.66-16.82c0,0,11.95,1.75,6.93,19.18,0,0-3.43,9-10.45,9.18C500.19-213.87,491.4-213.6,491.05-225.41Z" transform="translate(-304.53 352.17)"/><path class="cls-2" d="M510.68-208.22s2.76-15.06,14.84-12.15c0,0,11.06,4.59,3.4,19.21,0,0-4.77,7.37-11.46,5.73C517.46-195.43,509.05-197.38,510.68-208.22Z" transform="translate(-304.53 352.17)"/><path class="cls-2" d="M448.44-200.23s-8.8-12.53,1.75-19.1c0,0,11-4.67,16.07,11.05,0,0,1.91,8.56-3.95,12.19C462.31-196.09,455-191.47,448.44-200.23Z" transform="translate(-304.53 352.17)"/></svg>
