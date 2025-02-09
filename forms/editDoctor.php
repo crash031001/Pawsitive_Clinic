@@ -1,3 +1,10 @@
+<?php
+$NOMBRE = $_GET['nombre'];
+$TEL = $_GET['tel'];
+$DIR = $_GET['dir'];
+$CARGO = $_GET['cargo'];
+$ID = $_GET['id'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,13 +15,6 @@
   <link rel="stylesheet" href="../css/add.css">
   <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.css">
 </head>
-<?php
-$NOMBRE = $_GET['nombre'];
-$TEL = $_GET['tel'];
-$DIR = $_GET['dir'];
-$CARGO = $_GET['cargo'];
-$ID = $_GET['id'];
-?>
 
 <body>
   <div class="content">
@@ -42,10 +42,11 @@ $ID = $_GET['id'];
             </div>
           </div>
           <div class="d-flex flex-column">
+            <input type="text" name="doctor_id" value= <?php echo $ID ?> hidden >
             <label for="inputDireccion" class="fw-bold text-light">Direccion</label>
             <textarea class="p-3 inps" type="text"
               placeholder="Ej. Calle 3ra entre 2da y 1era" name="dir" id="direccion"
-              value="<?php echo $DIR  ?>"></textarea>
+              ><?php echo $DIR  ?></textarea>
           </div>
           <ul id="errors" class="mt-2">
           </ul>

@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   try {
     $db->query($sql);
-    header('location:http://localhost/pawsitive/views/doctores.php');
+    header ('Location: ../../views/doctores.php');
   } catch (Throwable $th) {
     echo $th->getMessage();
   }
