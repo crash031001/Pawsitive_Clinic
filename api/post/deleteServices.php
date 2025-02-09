@@ -9,7 +9,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $sql = "DELETE FROM servicios WHERE nombre_servicio = '$nombre' AND id = '$id';";    
     
   try {    
-    $db->query($sql);        
+    $db->query($sql);  
+    header ('Location: ../../views/services.php');      
   } catch (Throwable $th) {    
     echo $th->getMessage();    
   }    

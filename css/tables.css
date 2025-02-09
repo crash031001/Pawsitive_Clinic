@@ -89,7 +89,7 @@ td{
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 600px ;
+    width: 430px;
 }
 
 @media (max-width:700px) {
@@ -124,9 +124,14 @@ td{
 table{
     font-size: 23px !important;
 }
+@media (max-width:1500px) {
+    .esquina{
+        width: 250px;
+    }
+}
 @media (max-width:1300px) {
     .esquina{
-        width: 450px;
+        width: 250px;
     }
     .header{
         font-size: 30px;
@@ -244,7 +249,7 @@ width: 200px;
 }
 .window{
     background: #edefef ;
-    padding: 13px;
+    padding: 20px;
     transform: translateY(-1000px);
     transition: 0.3s cubic-bezier(0.6,1.2,0.9,1);
 }
@@ -252,7 +257,7 @@ width: 200px;
     transform: translateY(0px) !important;
 }
 .encab{
-    font-size: 20px;
+    font-size: 27px;
     font-weight: bold;
 }
 hr{
@@ -278,6 +283,13 @@ transition: 0.4s all;
 transition: 0.4s all;
     scale: 1;
 }
+.window p{
+    font-size: 25px;
+    margin-block: 30px !important;
+}
+.mod-icon{
+    width: 35px;
+}
 .window a:hover{
     scale: 1.05;
 }
@@ -291,9 +303,11 @@ transition: 0.4s all;
     scale: 0.9;
 }
 #accept{
+    font-size: 24px;
     color: #edefef;
     background: linear-gradient(to right,#13575A,#22968B);
 }
 #cancel{
+    font-size: 24px;
     border: 1px solid #353535;
 }

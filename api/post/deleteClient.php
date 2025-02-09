@@ -1,13 +1,13 @@
 <?php 
+include '../database.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') { 
-  include '../database.php'; 
-  $nombre = $_POST['nombre']; 
-  $id = $_POST['id']; 
+  $id = $_POST['delete_id']; 
 
-  $sql = "DELETE FROM clientes WHERE nombre_apellido = '$nombre' AND id = '$id';"; 
+  $sql = "DELETE FROM clientes WHERE id = '$id'"; 
 
   try { 
-    $db->query($sql); 
+    $db->query($sql);
+    header ('Location: ../../views/clientes.php');
   } catch (Throwable $th) { 
     echo $th->getMessage(); 
   } 

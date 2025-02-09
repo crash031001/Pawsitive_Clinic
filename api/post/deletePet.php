@@ -9,7 +9,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $sql = "DELETE FROM mascotas WHERE nombre = '$nombre' AND id = '$id';";   
    
   try {   
-    $db->query($sql);     
+    $db->query($sql);
+    header ('Location: ../../views/mascotas.php');     
   } catch (Throwable $th) {   
     echo $th->getMessage();   
   }   
