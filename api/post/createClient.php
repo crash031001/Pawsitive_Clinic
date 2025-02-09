@@ -6,11 +6,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $dir = $_POST['dir'];
   $tel = $_POST['tel'];
 
-  $sql = "INSERT INTO clientes (nombre_apellido,zona,direccion,telefono) VALUES('$nombre','$zona','$dir','$tel';)";
+  $sql = "INSERT INTO clientes (nombre_apellido,zona,direccion,telefono) VALUES('$nombre','$zona','$dir','$tel')";
 
 
   try {
     $db->query($sql);
+    header ('Location: ../../views/clientes.php');
   } catch (\Throwable $th) {
     echo $th->getMessage();
   }

@@ -10,7 +10,7 @@
 body{
     height: 100vh;
     /* background-image: url('../image/Sin-título-2_0015_-.png'); */
-    background: linear-gradient(to right,#13575A,#22968B, #13575A);
+    background: linear-gradient(to right,#13575A,#22968B);
     background-position: center;
     display: flex;
     justify-content: center;
@@ -85,12 +85,13 @@ td{
     background: #ccc;
     color: #247F70;
 }
-.footer-line{
+.esquina{
     position: absolute;
     bottom: 0;
-    margin-bottom: -120px;
-    mix-blend-mode: multiply;
+    right: 0;
+    width: 600px ;
 }
+
 @media (max-width:700px) {
     .footer{
         margin-bottom: 0px;
@@ -123,6 +124,22 @@ td{
 table{
     font-size: 23px !important;
 }
+@media (max-width:1300px) {
+    .esquina{
+        width: 450px;
+    }
+    .header{
+        font-size: 30px;
+    }
+    table{
+        font-size: 12px !important;
+    }
+}
+@media (max-width:1200px) {
+    .esquina{
+        width: 350px;
+    }
+}
 @media (max-width: 1000px) {
     .header{
         font-size: 50px;
@@ -135,17 +152,24 @@ table{
         margin-top: 40px;
     }
     table{
-        font-size:17px !important;
+        font-size:10px !important;
         margin-inline: 10px;
     }
     td{
-        padding: 5px;
+        padding: 3px;
     }
     tr{
-        padding: 5px;
+        padding: 3px;
     }
     .page-link{
         font-size: 15px;
+    }
+    .esquina{
+        width: 230px;
+    }
+    .icon{
+        width: 15px;
+        height: 15px;
     }
 }
 @media (max-width: 700px) {
@@ -172,21 +196,25 @@ table{
     .page-link{
         font-size: 10px;
     }
+    .esquina{
+        width: 300px;
+    }
 }
 @media (max-width: 500px) {
     .header{
-        font-size: 30px;
+        font-size: 24px;
     }
     .back svg{
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
     }
     .back{
-        margin-top: 40px;
+        margin-top: 35px;
     }
     table{
+scale: 0.75;
         font-size:10px !important;
-        margin-inline: 10px;
+        margin-inline: 10px !important;
     }
     td{
         padding: 3px;
@@ -200,5 +228,8 @@ table{
     .add{
         width: 25px;
         height: 25px;
+    }
+    .esquina{
+width: 200px;
     }
 }

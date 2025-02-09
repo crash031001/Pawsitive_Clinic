@@ -19,25 +19,25 @@ include 'C:\xampp\htdocs\WEB_FINAL\api\get\getDoctors.php';
             <section class="form position-relative">
                 <div class="data-form">
                     <h2 class="fw-bold text-light header mb-4 text-center">Añadir Servicio</h2>
-                    <form action="../api/post/createDoctor.php" id="create" method="post" class="fs-4">
+                    <form action="../api/post/createServices.php" id="create" method="post" class="fs-4">
                                 <div class="d-flex flex-column">
                                     <label for="inputNombre" class="fw-bold text-light">Nombre</label>
-                                    <input class="p-3 inps" type="text" placeholder="Ej. Vacunación" name="nombre" id="nombre">
+                                    <input class="p-3 inps" type="text" placeholder="Ej. Vacunación" name="nombre" id="inputNombre">
                                 </div>
                                 <div class="row row-cols-md-2">
                                     <div class="d-flex flex-column">
                                     <label for="inputDireccion" class="fw-bold text-light">Fecha</label>
-                                    <input class="p-3 inps" type="date" placeholder="Ej. Aplicación de vacunas necesarias" name="dir" id="direccion"></input>
+                                    <input class="p-3 inps" type="date" placeholder="Ej. Aplicación de vacunas necesarias" name="fecha" id="inputTelefono"></input>
                                 </div>
                                 <div class="d-flex flex-column">
                                     <label for="inputZona " class="fw-bold text-light">Costo</label>
-                                    <input class="p-3 inps" type="number" placeholder="Ej. 140.00" name="cargo" id="cargo">
+                                    <input class="p-3 inps" type="number" placeholder="Ej. 140.00" name="costo" id="costo">
                                 </div>
                                 </div>
                                 <div class="row row-cols-md-2">
                                 <div class="d-flex flex-column">
                                     <label for="selectDr" class="fw-bold text-light ">Doctor</label>
-                                    <select name="doctor" id="selectDr" class="p-3 inps"  >
+                                    <select name="id_doctor" id="selectDr" class="p-3 inps"  >
                                         <?php foreach($allDoctors as $doc){?>
                                             <option value=<?php echo $doc['id'] ?> ><?php echo $doc['nombre_apellido'] ?></option>
                                         <?php }?>
@@ -45,7 +45,7 @@ include 'C:\xampp\htdocs\WEB_FINAL\api\get\getDoctors.php';
                                 </div>
                                 <div class="d-flex flex-column">
                                     <label for="inputTelefono" class="fw-bold text-light ">Mascota</label>
-                                    <select name="mascota" class="p-3 inps"  >
+                                    <select name="id_mascota" class="p-3 inps"  >
                                         <?php foreach($allPets as $pet){?>
                                             <option value=<?php echo $pet['id'] ?> ><?php echo $pet['nombre'] ?></option>
                                         <?php }?>
@@ -54,7 +54,7 @@ include 'C:\xampp\htdocs\WEB_FINAL\api\get\getDoctors.php';
                                 </div>
                                 <div class="d-flex flex-column">
                                     <label for="inputDireccion" class="fw-bold text-light">Detalles</label>
-                                    <textarea class="p-3 inps" type="text" placeholder="Ej. Aplicación de vacunas necesarias" name="dir" id="direccion"></textarea>
+                                    <textarea class="p-3 inps" type="text" placeholder="Ej. Aplicación de vacunas necesarias" name="detalles" id="direccion"></textarea>
                                 </div>
                                 <ul id="errors" class="mt-2">
                                 </ul>
@@ -66,6 +66,6 @@ include 'C:\xampp\htdocs\WEB_FINAL\api\get\getDoctors.php';
                     </div>
             </section>
         </div>
-        <script src="./js/addDoctor.js"></script>
+        <script src="./js/addService.js"></script>
 </body>
 </html>

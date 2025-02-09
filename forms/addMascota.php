@@ -1,3 +1,6 @@
+<?php
+include 'C:\xampp\htdocs\WEB_FINAL\api\get\getClients.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +18,7 @@
             <section class="form position-relative">
                 <div class="data-form">
                     <h2 class="fw-bold text-light header mb-4 text-center">Añadir Mascota</h2>
-                    <form action="../api/post/createDoctor.php" id="create" method="post" class="fs-4">
+                    <form action="../api/post/createPet.php" id="create" method="post" class="fs-4">
                                 <div class="d-flex flex-column">
                                     <label for="nombre" class="fw-bold text-light">Nombre</label>
                                     <input class="p-3 inps" type="text" placeholder="Ej. Toby" name="nombre" id="nombre">
@@ -42,6 +45,14 @@
                                     <label for="edad " class="fw-bold text-light">Edad</label>
                                     <input class="p-3 inps" type="number" placeholder="Ej. 6 (En meses)" name="edad" id="edad">
                                 </div>
+                                <div class="d-flex flex-column">
+                                    <label for="edad " class="fw-bold text-light">Cliente</label>
+                                    <select class="p-3 inps" name="id_cliente" id="edad">
+                                        <?php foreach($allClients as $client){?>
+                                                <option value=<?php echo $client['id'] ?> ><?php echo $client['nombre_apellido'] ?></option>
+                                        <?php }?>
+                                    </select>
+                                </div>
                                 </div>
                                 <ul id="errors" class="mt-2">
                                 </ul>
@@ -53,6 +64,6 @@
                     </div>
             </section>
         </div>
-        <script src="./js/addDoctor.js"></script>
+        <script src="./js/addMascota.js"></script>
 </body>
 </html>
