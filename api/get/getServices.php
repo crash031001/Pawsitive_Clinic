@@ -1,5 +1,7 @@
 <?php
 include 'C:\xampp\htdocs\WEB_FINAL\api\database.php';
+
+
 $registros_por_pagina = 5;
 
 $sql_total = "SELECT COUNT(*) AS total FROM servicios";
