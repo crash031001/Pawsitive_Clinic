@@ -11,7 +11,8 @@ $ID = $_GET['id'];
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Editar Doctor | Pawsitive</title>
+
   <link rel="stylesheet" href="../css/add.css">
   <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.css">
 </head>
@@ -42,11 +43,10 @@ $ID = $_GET['id'];
             </div>
           </div>
           <div class="d-flex flex-column">
-            <input type="text" name="doctor_id" value= <?php echo $ID ?> hidden >
+            <input type="text" name="doctor_id" value=<?php echo $ID ?> hidden>
             <label for="inputDireccion" class="fw-bold text-light">Direccion</label>
             <textarea class="p-3 inps" type="text"
-              placeholder="Ej. Calle 3ra entre 2da y 1era" name="dir" id="direccion"
-              ><?php echo $DIR  ?></textarea>
+              placeholder="Ej. Calle 3ra entre 2da y 1era" name="dir" id="direccion"><?php echo $DIR  ?></textarea>
           </div>
           <ul id="errors" class="mt-2">
           </ul>

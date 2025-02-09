@@ -1,5 +1,14 @@
 <?php
 include 'C:\xampp\htdocs\WEB_FINAL\api\get\getClients.php';
+$MASC_NOMBRE = $_GET['nombre'];
+$MASC_TIPO = $_GET['tipo'];
+$MASC_COLOR = $_GET['color'];
+$MASC_EDAD = $_GET['edad'];
+$MASC_SEXO = $_GET['sexo'];
+$MASC_ID = $_GET['mascota_id'];
+$CLIENTE = $_GET['cliente_id']
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,8 +16,7 @@ include 'C:\xampp\htdocs\WEB_FINAL\api\get\getClients.php';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Añadir Mascota | Pawsitive</title>
-
+  <title>Editar Mascota | Pawsitive</title>
   <link rel="stylesheet" href="../css/add.css">
   <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.css">
 </head>
@@ -20,39 +28,43 @@ include 'C:\xampp\htdocs\WEB_FINAL\api\get\getClients.php';
     </section>
     <section class="form position-relative">
       <div class="data-form">
-        <h2 class="fw-bold text-light header mb-4 text-center">Añadir Mascota</h2>
+        <h2 class="fw-bold text-light header mb-4 text-center">Editar Mascota</h2>
         <form action="../api/post/createPet.php" id="create" method="post" class="fs-4">
           <div class="d-flex flex-column">
             <label for="nombre" class="fw-bold text-light">Nombre</label>
-            <input class="p-3 inps" type="text" placeholder="Ej. Toby" name="nombre" id="nombre">
+            <input class="p-3 inps" type="text" placeholder="Ej. Toby" name="nombre" id="nombre"
+              value="<?php echo $MASC_NOMBRE ?>">
           </div>
           <div class="row row-cols-md-2">
             <div class="d-flex flex-column">
               <label for="tipo" class="fw-bold text-light ">Tipo</label>
-              <input class="p-3 inps" type="text" placeholder="Ej. Perro" name="tipo" id="tipo">
+              <input class="p-3 inps" type="text" placeholder="Ej. Perro" name="tipo" id="tipo"
+                value="<?php echo $MASC_TIPO ?>">
             </div>
             <div class="d-flex flex-column">
               <label for="color " class="fw-bold text-light">Color</label>
-              <input class="p-3 inps" type="text" placeholder="Ej. Negro" name="color" id="color">
+              <input class="p-3 inps" type="text" placeholder="Ej. Negro" name="color" id="color"
+                value="<?php echo $MASC_COLOR ?>">
             </div>
           </div>
           <div class="row row-cols-md-2">
             <div class="d-flex flex-column">
               <label for="sexo" class="fw-bold text-light ">Sexo</label>
               <select class="p-3 inps" placeholder="Ej. Perro" name="sexo" id="sexo">
-                <option value="hembra">Hembra</option>
-                <option value="macho">Macho</option>
+                <option <?php echo $MASC_SEXO == 'hembra' ? 'selected' : '' ?> value="hembra">Hembra</option>
+                <option <?php echo $MASC_SEXO == 'macho' ? 'selected' : '' ?> value="macho">Macho</option>
               </select>
             </div>
             <div class="d-flex flex-column">
               <label for="edad " class="fw-bold text-light">Edad</label>
-              <input class="p-3 inps" type="number" placeholder="Ej. 6 (En meses)" name="edad" id="edad">
+              <input class="p-3 inps" type="number" placeholder="Ej. 6 (En meses)" name="edad" id="edad"
+                value="<?php echo $MASC_EDAD ?>">
             </div>
             <div class="d-flex flex-column">
               <label for="edad " class="fw-bold text-light">Cliente</label>
               <select class="p-3 inps" name="id_cliente" id="edad">
                 <?php foreach ($allClients as $client) { ?>
-                  <option value=<?php echo $client['id'] ?>><?php echo $client['nombre_apellido'] ?></option>
+                  <option <?php echo $CLIENTE == $client['id'] ? 'selected' : '' ?> value=<?php echo $client['id'] ?>><?php echo $client['nombre_apellido'] ?></option>
                 <?php } ?>
               </select>
             </div>
@@ -60,6 +72,7 @@ include 'C:\xampp\htdocs\WEB_FINAL\api\get\getClients.php';
           <ul id="errors" class="mt-2">
           </ul>
       </div>
+      <input type="hidden" name="mascota_id" value="<?php echo $MASC_ID ?>">
       </form>
       <div class="botones d-flex justify-content-center w-100 p-5">
         <button class="btns" id="aceptarbtn">Aceptar</button>
