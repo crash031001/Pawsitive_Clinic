@@ -112,6 +112,7 @@ td{
     padding-left: 10px;
     cursor: pointer;
 }
+
 .back span{
     font-size: 50px;
     color: var(--primaryC);
@@ -289,6 +290,7 @@ transition: 0.4s all;
 }
 .mod-icon{
     width: 35px;
+    pointer-events: none;
 }
 .window a:hover{
     scale: 1.05;

@@ -48,10 +48,11 @@ body{
     font-size: 45px;
 }
 .data-form{
+    overflow: auto;
+    scrollbar-width: none;
     padding: 50px;
 }
 .botones{
-    position: absolute;
     bottom: 0;
 }
 .inps{

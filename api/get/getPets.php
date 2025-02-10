@@ -2,26 +2,25 @@
 include 'C:\xampp\htdocs\WEB_FINAL\api\database.php';
 
 
-$registros_por_pagina = 5;
+$registros_por_pagina_M = 5;
 
-$sql_total = "SELECT COUNT(*) AS total FROM mascotas";
-$stmt_total = $db->prepare($sql_total);
-$stmt_total->execute();
+$sql_total_M = "SELECT COUNT(*) AS total FROM mascotas";
+$stmt_total_M = $db->prepare($sql_total_M);
+$stmt_total_M->execute();
+$total_registros_M = $stmt_total_M->fetch(PDO::FETCH_ASSOC)['total'];
+$total_paginas_M = ceil($total_registros_M / $registros_por_pagina_M);
 
-$total_registros = $stmt_total->fetch(PDO::FETCH_ASSOC)['total'];
-$total_paginas = ceil($total_registros / $registros_por_pagina);
+$pagina_actual_M = isset($_GET['page']) && is_numeric($_GET['page']) ? intval($_GET['page']) : 1;
+$pagina_actual_M = max(1, min($pagina_actual_M, $total_paginas_M));
 
-$pagina_actual = isset($_GET['page']) && is_numeric($_GET['page']) ? intval($_GET['page']) : 1;
-$pagina_actual = max(1, min($pagina_actual, $total_paginas));
+$offset_M = ($pagina_actual_M - 1) * $registros_por_pagina_M;
 
-$offset = ($pagina_actual - 1) * $registros_por_pagina;
+$sql_M = "SELECT * FROM mascotas LIMIT :limit Offset :offset";
+$stmt_M = $db->prepare($sql_M);
+$stmt_M->bindParam(':limit', $registros_por_pagina_M, PDO::PARAM_INT);
+$stmt_M->bindParam(':offset', $offset_M, PDO::PARAM_INT);
+$stmt_M->execute();
+$mascotas = $stmt_M->fetchAll(PDO::FETCH_ASSOC);
 
-$sql = "SELECT * FROM mascotas LIMIT :limit OFFSET :offset";
-$stmt = $db->prepare($sql);
-$stmt->bindParam(':limit', $registros_por_pagina, PDO::PARAM_INT);
-$stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
-$stmt->execute();
-$mascotas = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-$al = $db->query('SELECT * FROM mascotas');
-$allPets = $al->fetchAll();
+$all_M = $db->query('SELECT * FROM mascotas');
+$allPets = $all_M->fetchAll();

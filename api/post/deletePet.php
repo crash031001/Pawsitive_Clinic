@@ -1,12 +1,11 @@
 <?php   
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {   
   include '../database.php';   
-   
-  $nombre = $_POST['nombre'];   
-  $id = $_POST['id'];   
+ 
+  $id = $_POST['delete_id'];   
    
     
-  $sql = "DELETE FROM mascotas WHERE nombre = '$nombre' AND id = '$id';";   
+  $sql = "DELETE FROM mascotas WHERE id = '$id'";   
    
   try {   
     $db->query($sql);

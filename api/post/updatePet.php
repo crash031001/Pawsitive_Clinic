@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  include '/Applications/XAMPP/xamppfiles/htdocs/pawsitive/api/database.php';
+  include '../database.php';
 
   // Asegúrate de que el formulario incluya el ID de la mascota
   $mascota_id = $_POST['mascota_id'];
@@ -9,13 +9,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $tipo = $_POST['tipo'];
   $color = $_POST['color'];
   $sexo = $_POST['sexo'];
-  $nombre_cliente = $_POST['nombre_cliente'];
+  $cliente_id = $_POST['id_cliente'];
 
-  // ----- Obtener cliente_id -----
-  $sql_cliente = "SELECT id FROM clientes WHERE nombre = '$nombre_cliente'";
-  $result_cliente = $db->query($sql_cliente);
-  $row_cliente = $result_cliente->fetch(PDO::FETCH_ASSOC);
-  $cliente_id = $row_cliente['id'];
 
   // ----- Actualizar en la tabla mascotas -----
   $sql = "UPDATE mascotas SET
@@ -29,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   try {
     $db->query($sql);
-    echo "Mascota actualizada correctamente.";
+    header('Location: ../../views/mascotas.php');
   } catch (Throwable $th) {
     echo $th->getMessage();
   }
