@@ -16,20 +16,24 @@ aceptarbtn.addEventListener('click', () => {
     const telefono = inputTelefono.value.trim()
     const direccion = inputDireccion.value.trim()
     const zona = inputZona.value.trim();
+    const nombreRegex = /^[A-Za-zÁÉÍÓÚáéíóúÜüÑñ]+\s[A-Za-zÁÉÍÓÚáéíóúÜüÑñ\s]+$/
+    const telefonoRegex = /^[0-9]{8}$/
+    const direccionRegex = /^[A-Za-z\s]+\s[A-Za-z\s]+.*[0-9]+/
+
     if (nombre === '' || 
         telefono === '' || 
         direccion === '' || 
         zona === '') {
         err.push('Debe rellenar todos los campos')
     }else {
-    if (nombre.length < 3) {
-        err.push('Debe ingresar un nombre y apellido válido')
-    }if (telefono.length !== 8 || isNaN(telefono)) {
+    if (!nombreRegex.test(nombre)) {
+        err.push('El nombre debe contener solo letras y al menos dos palabras')
+    }if (!telefonoRegex.test(telefono)) {
         err.push('El teléfono debe tener 8 dígitos numéricos')
-    }if (direccion.length < 5) {
-        err.push('La dirección debe tener al menos 5 caracteres y contener un número')
-    }if (zona.split(' ').length < 2 || zona.length < 3) {
-        err.push('Debe ingresar una zona válida')
+    }if (!direccionRegex.test(direccion)) {
+        err.push('La dirección debe contener al menos dos palabras y un número.')
+    }if (zona.length < 5) {
+        err.push('La zona debe tener al menos 5 caracteres')
    }
 }
 if (err.length != 0) {
