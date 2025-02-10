@@ -25,12 +25,12 @@ include 'C:\xampp\htdocs\WEB_FINAL\api\get\getDoctors.php';
         <form action="../api/post/createServices.php" id="create" method="post" class="fs-4">
           <div class="d-flex flex-column">
             <label for="inputNombre" class="fw-bold text-light">Nombre</label>
-            <input class="p-3 inps" type="text" placeholder="Ej. Vacunación" name="nombre" id="inputNombre">
+            <input class="p-3 inps" type="text" placeholder="Ej. Vacunación" name="nombre" id="nombre">
           </div>
           <div class="row row-cols-md-2">
             <div class="d-flex flex-column">
               <label for="inputDireccion" class="fw-bold text-light">Fecha</label>
-              <input class="p-3 inps" type="text"placeholder="Ej. 2022-12-04 (AA-MM-DD)" name="fecha" id="inputTelefono"></input>
+              <input class="p-3 inps" type="text"placeholder="Ej. 2022-12-04 (AA-MM-DD)" name="fecha" id="fecha"></input>
             </div>
             <div class="d-flex flex-column">
               <label for="inputZona " class="fw-bold text-light">Costo</label>
@@ -57,7 +57,7 @@ include 'C:\xampp\htdocs\WEB_FINAL\api\get\getDoctors.php';
           </div>
           <div class="d-flex flex-column">
             <label for="inputDireccion" class="fw-bold text-light">Detalles</label>
-            <textarea class="p-3 inps" type="text" placeholder="Ej. Aplicación de vacunas necesarias" name="detalles" id="direccion"></textarea>
+            <textarea class="p-3 inps" type="text" placeholder="Ej. Aplicación de vacunas necesarias" name="detalles" id="detalles"></textarea>
           </div>
           <ul id="errors" class="mt-2">
           </ul>

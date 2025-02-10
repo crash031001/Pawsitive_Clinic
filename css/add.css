@@ -227,6 +227,7 @@ option{
         position: relative;
         padding: 3px !important;
         padding-inline: 5 !important;
+        margin-bottom: 10px;
     }
     .inps{
         font-size: 11px !important;

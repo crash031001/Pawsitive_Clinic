@@ -92,6 +92,11 @@ li:hover{
     color: var(--primaryC) !important;
     border: 2px solid var(--primaryC);
 }
+@media (max-width:900px) {
+    .blur-circle{
+        transform: translate(-35%,50%);
+    }
+}
 @media  (max-width: 600px) {
     .section-bg{
         background-position: center;

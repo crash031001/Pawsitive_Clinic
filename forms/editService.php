@@ -34,7 +34,7 @@ $MASCOTA = $_GET['mascota_id'];
         <form action="../api/post/updateServices.php" id="create" method="post" class="fs-4">
           <div class="d-flex flex-column">
             <label for="inputNombre" class="fw-bold text-light">Nombre</label>
-            <input class="p-3 inps" type="text" placeholder="Ej. Vacunación" name="nombre" id="inputNombre"
+            <input class="p-3 inps" type="text" placeholder="Ej. Vacunación" name="nombre" id="nombre"
               value="<?php echo $S_NOMBRE ?>"
             >
           </div>
@@ -72,7 +72,7 @@ $MASCOTA = $_GET['mascota_id'];
           </div>
           <div class="d-flex flex-column">
             <label for="inputDireccion" class="fw-bold text-light">Detalles</label>
-            <textarea class="p-3 inps" type="text" placeholder="Ej. Aplicación de vacunas necesarias" name="detalles" id="direccion"><?php echo $S_DETALLE ?></textarea>
+            <textarea class="p-3 inps" type="text" placeholder="Ej. Aplicación de vacunas necesarias" name="detalles" id="detalles"><?php echo $S_DETALLE ?></textarea>
           </div>
           <ul id="errors" class="mt-2">
           </ul>

@@ -1,4 +1,3 @@
-
 :root{
     --primaryC: #247F70;
     --ligthBgColor: #D8eee7;
@@ -9,7 +8,6 @@
 }
 body{
     height: 100vh;
-    /* background-image: url('../image/Sin-título-2_0015_-.png'); */
     background: linear-gradient(to right,#13575A,#22968B);
     background-position: center;
     display: flex;
@@ -190,7 +188,8 @@ table{
         margin-top: 40px;
     }
     table{
-        font-size:13px !important;
+        scale: 0.75;
+        font-size:17px !important;
         margin-inline: 10px;
     }
     td{
@@ -219,7 +218,7 @@ table{
     }
     table{
 scale: 0.75;
-        font-size:10px !important;
+        font-size:15px !important;
         margin-inline: 10px !important;
     }
     td{

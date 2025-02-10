@@ -15,24 +15,27 @@ aceptar.addEventListener('click', () => {
     const nombre = inputNombre.value.trim()
     const tipo = inputTipo.value.trim()
     const color = inputColor.value.trim()
-    const edad = inputEdad.value.trim();
+    const edad = inputEdad.value.trim()
+    const nombreRegex = /^[A-Za-zÁÉÍÓÚáéíóúÜüÑñ]+$/
+    const colorRegex = /^[A-Za-zÁÉÍÓÚáéíóúÜüÑñ]+$/
+    const tipoRegex = /^[A-Za-zÁÉÍÓÚáéíóúÜüÑñ]+$/
     if (nombre === '' || 
         tipo === '' || 
         color === '' || 
         edad === '') {
         err.push('Debe rellenar todos los campos')
     }else {
-    if (nombre.length < 3) {
-        err.push('Debe ingresar un nombre válido')
+    if (!nombreRegex.test(nombre) || nombre.length < 3) {
+        err.push('El nombre debe contener solo letras, al menos 3 caracteres')
     }
-    if (edad.length > 2 ){
-        err.push('La edad debe tener 2 dígitos numéricos como máximo')
+    if (edad.length > 3 || edad < 1 ){
+        err.push('La edad debe tener 3 dígitos numéricos como máximo y ser mayor a 0')
     }
-    if (color.length < 4) {
-        err.push('El color debe tener al menos 4 caracteres')
+    if (!colorRegex.test(color) || color.length < 4) {
+        err.push('El color debe tener al menos 4 caracteres, y contener solo letras')
     }
-    if (tipo.length < 4) {
-        err.push('El tipo debe tener al menos 4 caracteres')
+    if (!tipoRegex.test(tipo) ||  tipo.length < 4) {
+        err.push('El tipo debe tener al menos 4 caracteres, y contener solo letras')
     }
 }
 if (err.length != 0) {
