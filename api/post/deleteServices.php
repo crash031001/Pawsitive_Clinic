@@ -1,16 +1,14 @@
 <?php    
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {    
   include '../database.php';    
-    
-  $nombre = $_POST['nombre'];    
-  $id = $_POST['id'];    
+  $id = $_POST['delete_id'];    
     
     
-  $sql = "DELETE FROM servicios WHERE nombre_servicio = '$nombre' AND id = '$id';";    
+  $sql = "DELETE FROM servicios WHERE  id = '$id'";    
     
   try {    
     $db->query($sql);  
-    header ('Location: ../../views/services.php');      
+    header ('Location: ../../views/servicios.php');      
   } catch (Throwable $th) {    
     echo $th->getMessage();    
   }    
